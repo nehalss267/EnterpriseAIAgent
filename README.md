@@ -1,7 +1,3 @@
-Of course\! Here is a comprehensive `README.md` for your project.
-
------
-
 # EnterpriseAIAgent: A RAG-based PDF Q\&A System
 
 EnterpriseAIAgent is a powerful Question-Answering (Q\&A) application built with Python. It leverages a **Retrieval-Augmented Generation (RAG)** architecture to answer questions based on the content of a specified PDF document.
