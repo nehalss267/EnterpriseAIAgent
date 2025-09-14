@@ -32,6 +32,8 @@ vector_db = Milvus(
     auto_id=True,
     index_params={"index_type": "AUTOINDEX"},
 )
+
+
 from langchain.text_splitter import CharacterTextSplitter
 from transformers import AutoTokenizer
 
@@ -49,7 +51,7 @@ splitter = CharacterTextSplitter.from_huggingface_tokenizer(
 )
 
 docs = splitter.split_documents(documents)
-
+vector_db.add_documents(docs)
 template = """You are EnterpriseAIAgent, an AI tutor specializing in clearing doubts in content extraction; preserving equations, figures, and tables where possible.User Question: {question}"""
 
 prompt = PromptTemplate(template=template, input_variables=["question"])
